@@ -213,9 +213,9 @@ checking = "뉴스 확인 중"
 
 # IDK how to translate this xD
 [js.landing.discord]
-loading = "Loading game.."
-joining = "Sailing to Westeros!"
-joined = "Exploring the Realm!"
+loading = "로딩중.."
+joining = "구스구스덕 플레이!"
+joined = "구스구스덕 플레이중!"
 
 [js.overlay]
 dismiss = "해제"
