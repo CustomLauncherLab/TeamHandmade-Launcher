@@ -59,7 +59,7 @@ if (!isDev) {
                 if (process.platform === 'darwin') {
                     info.darwindownload = `https://github.com/go-tiger/TeamHandmade-Launcher/releases/download/v${
                         info.version
-                    }/Helios-Launcher-setup-${info.version}${
+                    }/TeamHandmadeLauncher-setup-${info.version}${
                         process.arch === 'arm64' ? '-arm64' : '-x64'
                     }.dmg`;
                     showUpdateUI(info);

@@ -613,7 +613,7 @@ class ProcessBuilder {
                         case 'launcher_name':
                             val = args[i].replace(
                                 argDiscovery,
-                                'Helios-Launcher'
+                                'TeamHandmadeLauncher'
                             );
                             break;
                         case 'launcher_version':
