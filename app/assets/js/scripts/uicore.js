@@ -43,11 +43,12 @@ webFrame.setVisualZoomLevelLimits(1, 1);
 
 // Initialize auto updates in production environments.
 let updateCheckListener;
-if (!isDev) {
+if (isDev) {
+    console.log('🚀  ipcRenderer:', ipcRenderer._events);
+    console.log('🚀  arch:', process.arch);
+    console.log('🚀  platform:', process.platform);
     ipcRenderer.on('autoUpdateNotification', (event, arg, info) => {
         console.log('🚀  info:', info);
-        console.log('🚀  arg:', arg);
-        console.log('🚀  event:', event);
         switch (arg) {
             case 'checking-for-update':
                 loggerAutoUpdater.info('Checking for update..');
@@ -64,6 +65,9 @@ if (!isDev) {
                     }/TeamHandmadeLauncher-setup-${info.version}${
                         process.arch === 'arm64' ? '-arm64' : '-x64'
                     }.dmg`;
+                    showUpdateUI(info);
+                } else if (process.platform === 'win32') {
+                    info.windownload = `https://github.com/go-tiger/TeamHandmade-Launcher/releases/download/v${info.version}/TeamHandmadeLauncher-Setup-${info.version}.exe`;
                     showUpdateUI(info);
                 }
 
