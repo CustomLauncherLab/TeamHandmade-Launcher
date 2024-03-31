@@ -1852,8 +1852,11 @@ function populateSettingsUpdateInformation(data) {
             );
         } else {
             settingsUpdateButtonStatus(
-                Lang.queryJS('settings.updates.downloadingButton'),
-                true
+                Lang.queryJS('settings.updates.downloadButton'),
+                false,
+                () => {
+                    shell.openExternal(data.windownload);
+                }
             );
         }
     } else {
