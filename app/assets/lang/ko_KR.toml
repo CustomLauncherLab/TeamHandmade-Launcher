@@ -276,7 +276,7 @@ releaseNotesFailed = "릴리스 노트 로드 실패."
 newReleaseTitle = "새로운 릴리스 사용 가능"
 newPreReleaseTitle = "새로운 프리릴리스 사용 가능"
 downloadingButton = "다운로드 중.."
-downloadButton = 'GitHub에서 다운로드<span style="font-size: 10px;color: gray;text-shadow: none !important;">런처를 닫고 dmg를 실행하여 업데이트하세요.</span>'
+downloadButton = 'GitHub에서 다운로드<span style="font-size: 10px;color: gray;text-shadow: none !important;">런처를 닫고 실행하여 업데이트하세요.</span>'
 latestVersionTitle = "최신 버전 사용 중"
 checkForUpdatesButton = "업데이트 확인"
 checkingForUpdatesButton = "업데이트 확인 중.."

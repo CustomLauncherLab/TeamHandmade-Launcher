@@ -44,11 +44,7 @@ webFrame.setVisualZoomLevelLimits(1, 1);
 // Initialize auto updates in production environments.
 let updateCheckListener;
 if (!isDev) {
-    console.log('🚀  ipcRenderer:', ipcRenderer._events);
-    console.log('🚀  arch:', process.arch);
-    console.log('🚀  platform:', process.platform);
     ipcRenderer.on('autoUpdateNotification', (event, arg, info) => {
-        console.log('🚀  info:', info);
         switch (arg) {
             case 'checking-for-update':
                 loggerAutoUpdater.info('Checking for update..');
