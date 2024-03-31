@@ -24,6 +24,8 @@ LangLoader.setupLanguage();
 
 // Setup auto updater.
 function initAutoUpdater(event, data) {
+    console.log('🚀  data:', data);
+    console.log('🚀  event:', event);
     if (data) {
         autoUpdater.allowPrerelease = true;
     } else {

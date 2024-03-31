@@ -45,6 +45,9 @@ webFrame.setVisualZoomLevelLimits(1, 1);
 let updateCheckListener;
 if (!isDev) {
     ipcRenderer.on('autoUpdateNotification', (event, arg, info) => {
+        console.log('🚀  info:', info);
+        console.log('🚀  arg:', arg);
+        console.log('🚀  event:', event);
         switch (arg) {
             case 'checking-for-update':
                 loggerAutoUpdater.info('Checking for update..');
@@ -55,7 +58,6 @@ if (!isDev) {
                 break;
             case 'update-available':
                 loggerAutoUpdater.info('New update available', info.version);
-
                 if (process.platform === 'darwin') {
                     info.darwindownload = `https://github.com/go-tiger/TeamHandmade-Launcher/releases/download/v${
                         info.version
