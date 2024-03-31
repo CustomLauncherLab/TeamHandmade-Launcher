@@ -43,7 +43,7 @@ webFrame.setVisualZoomLevelLimits(1, 1);
 
 // Initialize auto updates in production environments.
 let updateCheckListener;
-if (isDev) {
+if (!isDev) {
     console.log('🚀  ipcRenderer:', ipcRenderer._events);
     console.log('🚀  arch:', process.arch);
     console.log('🚀  platform:', process.platform);
