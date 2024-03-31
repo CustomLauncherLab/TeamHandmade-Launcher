@@ -196,6 +196,10 @@ function updateSelectedServer(serv) {
         animateSettingsTabRefresh();
     }
     setLaunchEnabled(serv != null);
+    //게임화면 조절
+    ConfigManager.setGameWidth(serv.rawServer.windowSize.Width);
+    ConfigManager.setGameHeight(serv.rawServer.windowSize.Height);
+    ConfigManager.save();
 }
 // Real text is set in uibinder.js on distributionIndexDone.
 server_selection_button.innerHTML =
